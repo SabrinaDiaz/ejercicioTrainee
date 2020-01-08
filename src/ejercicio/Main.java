@@ -24,7 +24,7 @@ public class Main {
 
         System.out.println("=============================");
         System.out.println("Vehículos ordenados por precio de mayor a menor:");
-        List<Vehiculo> a = lista.sort(Comparator.comparing(Vehiculo::getPrecio));
+        lista.sort(Comparator.comparing(Vehiculo::getPrecio));
         for (Vehiculo v : lista) {
             System.out.println(v.getMarca() + " " + v.getModelo() + " " + v.getPrecio());
         }
