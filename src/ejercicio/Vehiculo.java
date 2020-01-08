@@ -7,26 +7,8 @@ public abstract class Vehiculo {
 
     String marca;
     String modelo;
-    //    int puertas;
     double precio;
 
-    //constructor
-    /*    public Vehiculo(String marca, String modelo, int puertas, double precio){
-            this.marca = marca;
-            this.modelo = modelo;
-            this.puertas = puertas;
-            this.precio = precio;
-            
-        }
-        
-       public String toString(){
-           if("Peugeot".equals(marca)){
-          return "Marca: " + marca + " // Modelo: " + modelo + " " + " // Puertas: " + puertas + " // Precio: $" + precio;
-       } else {
-          return "Marca: " + marca + " // Modelo: " + modelo + " " + " // Cilindrada: " + puertas+"c" + " // Precio: $" + precio;               
-           }
-       }       
-     */
     public abstract String toString();
 
     public String getMarca() {
@@ -39,6 +21,10 @@ public abstract class Vehiculo {
 
     public double getPrecio() {
         return this.precio;
+    }
+    
+    public String otroFormato(){
+        return this.marca + " " + this.modelo;
     }
 
     void sort(Comparator<Vehiculo> comparing) {
