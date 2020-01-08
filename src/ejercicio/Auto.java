@@ -1,5 +1,7 @@
 package ejercicio;
 
+import java.text.DecimalFormat;
+
 public class Auto extends Vehiculo {
 
     int puerta;
@@ -13,7 +15,9 @@ public class Auto extends Vehiculo {
 
     @Override
     public String toString() {
-        return "Marca: " + marca + " // Modelo: " + modelo + " " + " // Puertas: " + puerta + " // Precio: $" + precio;
+        DecimalFormat formateador = new DecimalFormat("0,000.00");
+        return "Marca: " + marca + " // Modelo: " + modelo + 
+                " " + " // Puertas: " + puerta + " // Precio: $" + formateador.format(precio);
     }
 
 }

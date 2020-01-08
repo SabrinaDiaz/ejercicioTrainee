@@ -1,5 +1,7 @@
 package ejercicio;
 
+import java.text.DecimalFormat;
+
 public class Moto extends Vehiculo {
 
     int cilindrada;
@@ -13,7 +15,9 @@ public class Moto extends Vehiculo {
 
     @Override
     public String toString() {
-        return "Marca: " + marca + " // Modelo: " + modelo + " " + " // Cilindrada: " + cilindrada + "c" + " // Precio: $" + precio;
+        DecimalFormat formateador = new DecimalFormat("0,000.00");
+        return "Marca: " + marca + " // Modelo: " + modelo + " " +
+                " // Cilindrada: " + cilindrada + "c" + " // Precio: $" +  formateador.format(precio);
     }
 
 }
