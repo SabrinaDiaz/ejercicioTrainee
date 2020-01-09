@@ -16,12 +16,12 @@ public class Main {
         System.out.println("Vehículo mas caro :");
 
         System.out.println("Vehículo más barato :");
-      //  Vista.elMasBarato(lista);
+        //  Vista.elMasBarato(lista);
         System.out.print("Vehículo que contiene en el modelo la letra ‘Y’: ");
         Vista.palabraSegunPrimeraLetra(lista);
 
         System.out.println("=============================");
         System.out.println("Vehículos ordenados por precio de mayor a menor:");
-       Vista.ordenMayorAMenor(lista);
+        Vista.ordenMayorAMenor(lista);
     }
 }

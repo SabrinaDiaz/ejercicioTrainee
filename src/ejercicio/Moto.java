@@ -19,5 +19,5 @@ public class Moto extends Vehiculo {
         return "Marca: " + marca + " // Modelo: " + modelo + " " +
                 " // Cilindrada: " + cilindrada + "c" + " // Precio: $" +  formateador.format(precio);
     }
-
+    
 }

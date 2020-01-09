@@ -16,8 +16,8 @@ public class Auto extends Vehiculo {
     @Override
     public String toString() {
         DecimalFormat formateador = new DecimalFormat("0,000.00");
-        return "Marca: " + marca + " // Modelo: " + modelo + 
-                " " + " // Puertas: " + puerta + " // Precio: $" + formateador.format(precio);
+        return "Marca: " + marca + " // Modelo: " + modelo
+                + " " + " // Puertas: " + puerta + " // Precio: $" + formateador.format(precio);
     }
 
 }

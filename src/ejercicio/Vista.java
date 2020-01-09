@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-public class Vista {
+public class Vista implements Comparable<Vista> {
 
     public static List<Vehiculo> crearLista() {
         List<Vehiculo> lista = new ArrayList<>();
@@ -21,9 +21,10 @@ public class Vista {
     }
 
     public static void mostrarLista(List<Vehiculo> lista) {
-        for (int i = 0; i <= lista.size() - 1; i++) {
-            System.out.println(lista.get(i));
-        }
+        //   for (int i = 0; i <= lista.size() - 1; i++) {
+        //     System.out.println(lista.get(i));
+        lista.forEach(System.out::println);
+
     }
 
     public static void palabraSegunPrimeraLetra(List<Vehiculo> lista) {
@@ -33,7 +34,8 @@ public class Vista {
 
         System.out.println(palabra.get(0).getMarca() + " " + palabra.get(0).getModelo() + " $" + formateador.format(palabra.get(0).getPrecio()));
     }
-/*
+
+    /*
     public static void ordenMayorAMenor(List<Vehiculo> lista) {
         lista.sort(Comparator.comparing(Vehiculo::getPrecio).reversed());
         for (Vehiculo elemento : lista) {
@@ -41,17 +43,21 @@ public class Vista {
          
         }
     }*/
-      public static void ordenMayorAMenor(List<Vehiculo> lista) {
-                 lista.sort(Comparator.comparing(Vehiculo::getPrecio).reversed());
+    public static void ordenMayorAMenor(List<Vehiculo> lista) {
+        lista.sort(Comparator.comparing(Vehiculo::getPrecio).reversed());
 
-     for (Vehiculo elemento : lista) {
-           System.out.println(elemento.otroFormato());
-  // return elemento;     
-         //   System.out.println(v.getMarca() + " " + v.getModelo());
-      }
-      }
+        for (Vehiculo elemento : lista) {
+            System.out.println(elemento.otroFormato());
+
+        }
+    }
+
+    @Override
+    public int compareTo(Vista t) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }
-     /*
+/*
     public static List<Vehiculo> elMasCaro(List<Vehiculo> lista){
       // System.out.println( lista.get(0));
     }
@@ -59,4 +65,3 @@ public class Vista {
        System.out.println( lista.get(lista.size()-1));
     }
       }*/
-
