@@ -3,13 +3,11 @@ package ejercicio;
 import java.util.Comparator;
 import java.util.stream.Stream;
 
-public abstract class Vehiculo implements Transporte {
+public abstract class Vehiculo implements Mostrar {
 
     String marca;
     String modelo;
     double precio;
-
-    public abstract String toString();
 
     public String getMarca() {
         return this.marca;
@@ -22,26 +20,11 @@ public abstract class Vehiculo implements Transporte {
     public double getPrecio() {
         return this.precio;
     }
-    
-    public String otroFormato(){
+
+    public String otroFormato() {
         return this.marca + " " + this.modelo;
     }
-    
-    @Override
-    public void modeloDeVehiculo(){
-       System.out.println(this.modelo);
-    }
 
-    @Override
-    public void marcaDeVehiculo(){
-          System.out.println(this.marca);
-    }
-    
-    @Override
-    public void precioDeVehiculo(){
-          System.out.println(this.precio);
-    }
-    
     void sort(Comparator<Vehiculo> comparing) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
@@ -53,6 +36,5 @@ public abstract class Vehiculo implements Transporte {
     Object stream() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
-    
+
 }

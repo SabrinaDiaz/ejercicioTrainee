@@ -20,7 +20,7 @@ public class Vista implements Comparable<Vista> {
         return lista;
     }
 
-    public static void mostrarLista(List<Vehiculo> lista) {
+    public static void mostrarVehiculos(List<Vehiculo> lista) {
         //   for (int i = 0; i <= lista.size() - 1; i++) {
         //     System.out.println(lista.get(i));
         lista.forEach(System.out::println);

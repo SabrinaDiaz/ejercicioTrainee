@@ -16,8 +16,8 @@ public class Moto extends Vehiculo {
     @Override
     public String toString() {
         DecimalFormat formateador = new DecimalFormat("0,000.00");
-        return "Marca: " + marca + " // Modelo: " + modelo + " " +
-                " // Cilindrada: " + cilindrada + "c" + " // Precio: $" +  formateador.format(precio);
+        return "Marca: " + marca + " // Modelo: " + modelo + " "
+                + " // Cilindrada: " + cilindrada + "c" + " // Precio: $" + formateador.format(precio);
     }
-    
+
 }

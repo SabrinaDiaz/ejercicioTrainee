@@ -9,11 +9,8 @@ package ejercicio;
  *
  * @author sonia
  */
-public interface Transporte {
+public interface Mostrar {
+     @Override
+     public String toString();
 
-    public void modeloDeVehiculo();
-
-    public void marcaDeVehiculo();
-
-    public void precioDeVehiculo();
 }
