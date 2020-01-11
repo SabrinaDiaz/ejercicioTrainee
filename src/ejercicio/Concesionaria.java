@@ -33,15 +33,9 @@ public class Concesionaria {
 
     }
 
-    public void palabraSegunPrimeraLetra() {
-        DecimalFormat formateador = new DecimalFormat("0,000.00");
-        Stream<Vehiculo> comienzaConY = this.listaVehiculos.stream().filter(f -> f.getModelo().startsWith("Y"));
-        List<Vehiculo> palabra = comienzaConY.collect(Collectors.toList());
-
-        System.out.println(palabra.get(0).getMarca() + " " + palabra.get(0).getModelo() + " $" + formateador.format(palabra.get(0).getPrecio()));
-    }
-
-    public void ordenMayorAMenor() {
+    public void vehiculosOrdenadosDeMayorAMenor() {
+        System.out.println("=============================");
+        System.out.println("Vehículos ordenados por precio de mayor a menor:");
         this.listaVehiculos.sort(Comparator.comparing(Vehiculo::getPrecio).reversed());
 
         this.listaVehiculos.forEach((elemento) -> {
@@ -49,13 +43,26 @@ public class Concesionaria {
         });
     }
 
-    public void elMasCaro() {
+    public void vehiculoMasCaro() {
+        System.out.println("=============================");
+        System.out.print("Vehículo mas caro : ");
         this.listaVehiculos.sort(Comparator.comparing(Vehiculo::getPrecio).reversed());
         System.out.println(this.listaVehiculos.get(0).getMarca() + " " + this.listaVehiculos.get(0).getModelo());
     }
 
-    public void elMasBarato() {
+    public void vehiculoMasBarato() {
+        System.out.print("Vehículo más barato : ");
         System.out.println(this.listaVehiculos.get(this.listaVehiculos.size() - 1).getMarca() + " "
                 + this.listaVehiculos.get(this.listaVehiculos.size() - 1).getModelo());
     }
+
+    public void vehiculoSegunPrimeraLetra() {
+        System.out.print("Vehículo que contiene en el modelo la letra ‘Y’: ");
+        DecimalFormat formateador = new DecimalFormat("0,000.00");
+        Stream<Vehiculo> comienzaConY = this.listaVehiculos.stream().filter(f -> f.getModelo().startsWith("Y"));
+        List<Vehiculo> palabra = comienzaConY.collect(Collectors.toList());
+
+        System.out.println(palabra.get(0).getMarca() + " " + palabra.get(0).getModelo() + " $" + formateador.format(palabra.get(0).getPrecio()));
+    }
+
 }
